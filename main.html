@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Script Src Attribute Example</title>
+    <script src='script.js'></script>
+    <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+    <link rel="stylesheet" href="login.css">   
+  </head>
+  
+  <body>
+    <!--login page start -->
+    <div class="login-page">
+     <div class="form"> 
+       <form class="register-form">
+         <input type = "text" placeholder = "username"/>
+         <input type = "text" placeholder = "email"/>
+         <input type = "text" placeholder = "password"/>
+         <button>Create Account</button>
+         <p class ="message">Already Registered?<a href="#">Login</a></p>
+       </form>
+
+       <form id="Login-form">
+        <input type = "text" name="uname" placeholder = "username"/>
+        <input type = "password" name="pass" placeholder  = "password"/>
+        <!--error -->  
+        <button onclick="yeslog()">Login</button>
+        <p class ="message">Not Registered?<a href="#">Register</a></p>
+       </form>
+     </div>
+    </div>
+    <script>
+      $('.message a').click(function(){
+      $('form').animate({height: "toggle", opacity: "toggle"},"slow");
+      });
+      
+   
+    </script>
+    <!--login page end -->   
+  </body>
+</html>
